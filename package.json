@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-gswap",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Interchange two vectors.",
   "license": "Apache-2.0",
   "author": {
