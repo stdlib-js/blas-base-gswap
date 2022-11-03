@@ -31,13 +31,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@esm/index.mjs';
+import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.0.8-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.0.8-esm/index.mjs';
 ```
 
 #### gswap( N, x, strideX, y, strideY )
@@ -154,7 +154,7 @@ gswap.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@esm/index.mjs';
+import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.0.8-esm/index.mjs';
 
 var x = filledarrayBy( 10, 'float64', discreteUniform( 0, 500 ) );
 console.log( x );
