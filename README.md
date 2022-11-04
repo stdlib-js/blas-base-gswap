@@ -24,25 +24,30 @@ limitations under the License.
 
 > Interchange two vectors.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-gswap
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-gswap/tags). For example,
-
-```javascript
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.0.8-esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@esm/index.mjs';
+var gswap = require( '@stdlib/blas-base-gswap' );
 ```
 
 #### gswap( N, x, strideX, y, strideY )
@@ -82,7 +87,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Initial arrays...
 var x0 = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -119,7 +124,7 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to swap every other value in `x` starting from the second value with the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var y = new Float64Array( [ 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ] );
@@ -151,15 +156,10 @@ gswap.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var gswap = require( '@stdlib/blas-base-gswap' );
 
 var x = filledarrayBy( 10, 'float64', discreteUniform( 0, 500 ) );
 console.log( x );
@@ -171,10 +171,6 @@ console.log( y );
 gswap( x.length, x, 1, y, -1 );
 console.log( x );
 console.log( y );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -207,7 +203,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -237,8 +233,8 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-gswap.svg
 [npm-url]: https://npmjs.org/package/@stdlib/blas-base-gswap
 
-[test-image]: https://github.com/stdlib-js/blas-base-gswap/actions/workflows/test.yml/badge.svg?branch=v0.0.8
-[test-url]: https://github.com/stdlib-js/blas-base-gswap/actions/workflows/test.yml?query=branch:v0.0.8
+[test-image]: https://github.com/stdlib-js/blas-base-gswap/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-base-gswap/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-gswap/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/blas-base-gswap?branch=main
@@ -273,17 +269,17 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/blas/base/dswap]: https://github.com/stdlib-js/blas-base-dswap/tree/esm
+[@stdlib/blas/base/dswap]: https://github.com/stdlib-js/blas-base-dswap
 
-[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap/tree/esm
+[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/esm
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy/tree/esm
+[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy
 
-[@stdlib/blas/gswap]: https://github.com/stdlib-js/blas-gswap/tree/esm
+[@stdlib/blas/gswap]: https://github.com/stdlib-js/blas-gswap
 
 <!-- </related-links> -->
 
