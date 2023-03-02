@@ -65,13 +65,13 @@ gswap( x.length, x, 1, y, 1 );
 
 The function has the following parameters:
 
--   **N**: number of values to swap.
+-   **N**: number of indexed elements.
 -   **x**: first input array.
 -   **strideX**: index increment for `x`.
 -   **y**: second input array.
 -   **strideY**: index increment for `y`.
 
-The `N` and `stride` parameters determine how values from `x` and `y` are accessed at runtime. For example, to swap in reverse order every other value in `x` with the first `N` elements of `y`,
+The `N` and stride parameters determine which elements in the strided arrays are accessed at runtime. For example, to swap in reverse order every other value in `x` with the first `N` elements of `y`,
 
 ```javascript
 var x = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
@@ -121,7 +121,7 @@ The function has the following additional parameters:
 -   **offsetX**: starting index for `x`.
 -   **offsetY**: starting index for `y`.
 
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to swap every other value in `x` starting from the second value with the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to swap every other value in `x` starting from the second value with the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
@@ -143,7 +143,7 @@ gswap.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 ## Notes
 
 -   If `N <= 0`, both functions leave `x` and `y` unchanged.
--   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array/complex64`][@stdlib/array/complex64]).
+-   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-complex64`][@stdlib/array/complex64]).
 -   `gswap()` corresponds to the [BLAS][blas] level 1 function [`dswap`][dswap] with the exception that this implementation works with any array type, not just Float64Arrays. Depending on the environment, the typed versions ([`dswap`][@stdlib/blas/base/dswap], [`sswap`][@stdlib/blas/base/sswap], etc.) are likely to be significantly more performant.
 
 </section>
@@ -185,10 +185,10 @@ console.log( y );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/blas/base/dswap`][@stdlib/blas/base/dswap]</span><span class="delimiter">: </span><span class="description">interchange two double-precision floating-point vectors.</span>
--   <span class="package-name">[`@stdlib/blas/base/gcopy`][@stdlib/blas/base/gcopy]</span><span class="delimiter">: </span><span class="description">copy values from x into y.</span>
--   <span class="package-name">[`@stdlib/blas/base/sswap`][@stdlib/blas/base/sswap]</span><span class="delimiter">: </span><span class="description">interchange two single-precision floating-point vectors.</span>
--   <span class="package-name">[`@stdlib/blas/gswap`][@stdlib/blas/gswap]</span><span class="delimiter">: </span><span class="description">interchange two vectors.</span>
+-   <span class="package-name">[`@stdlib/blas-base/dswap`][@stdlib/blas/base/dswap]</span><span class="delimiter">: </span><span class="description">interchange two double-precision floating-point vectors.</span>
+-   <span class="package-name">[`@stdlib/blas-base/gcopy`][@stdlib/blas/base/gcopy]</span><span class="delimiter">: </span><span class="description">copy values from x into y.</span>
+-   <span class="package-name">[`@stdlib/blas-base/sswap`][@stdlib/blas/base/sswap]</span><span class="delimiter">: </span><span class="description">interchange two single-precision floating-point vectors.</span>
+-   <span class="package-name">[`@stdlib/blas-gswap`][@stdlib/blas/gswap]</span><span class="delimiter">: </span><span class="description">interchange two vectors.</span>
 
 </section>
 
@@ -247,7 +247,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
