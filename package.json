@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-gswap",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Interchange two vectors.",
   "license": "Apache-2.0",
   "author": {
@@ -37,21 +37,21 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-base-arraylike2object": "^0.0.2",
-    "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.7"
+    "@stdlib/array-base-arraylike2object": "^0.1.0",
+    "@stdlib/types": "^0.1.0",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.0"
   },
   "devDependencies": {
-    "@stdlib/array-complex128": "^0.0.6",
-    "@stdlib/array-filled-by": "^0.0.2",
-    "@stdlib/array-float64": "^0.0.6",
-    "@stdlib/bench": "^0.0.12",
+    "@stdlib/array-complex128": "^0.1.0",
+    "@stdlib/array-filled-by": "^0.1.0",
+    "@stdlib/array-float64": "^0.1.0",
+    "@stdlib/bench": "^0.1.0",
     "@stdlib/blas-base-gcopy": "^0.0.8",
-    "@stdlib/math-base-assert-is-nan": "^0.0.8",
-    "@stdlib/math-base-special-pow": "^0.0.7",
+    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/math-base-special-pow": "^0.1.0",
     "@stdlib/random-base-discrete-uniform": "^0.0.6",
     "@stdlib/random-base-randu": "^0.0.8",
-    "@stdlib/strided-base-reinterpret-complex128": "^0.0.2",
+    "@stdlib/strided-base-reinterpret-complex128": "^0.1.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
