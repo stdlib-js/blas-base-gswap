@@ -39,7 +39,7 @@
   "dependencies": {
     "@stdlib/array-base-arraylike2object": "^0.1.0",
     "@stdlib/types": "^0.1.0",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.0"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.1"
   },
   "devDependencies": {
     "@stdlib/array-complex128": "^0.1.0",
@@ -47,7 +47,7 @@
     "@stdlib/array-float64": "^0.1.0",
     "@stdlib/bench": "^0.1.0",
     "@stdlib/blas-base-gcopy": "^0.1.0",
-    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/math-base-assert-is-nan": "^0.1.1",
     "@stdlib/math-base-special-pow": "^0.1.0",
     "@stdlib/random-base-discrete-uniform": "^0.1.0",
     "@stdlib/random-base-randu": "^0.1.0",
