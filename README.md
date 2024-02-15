@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@deno/mod.js';
+import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.2.0-deno/mod.js';
 ```
 
 #### gswap( N, x, strideX, y, strideY )
@@ -159,7 +159,7 @@ gswap.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@deno/mod.js';
+import gswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-gswap@v0.2.0-deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
