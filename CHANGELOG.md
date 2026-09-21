@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-15)
+## Unreleased (2026-09-21)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`4eff251`](https://github.com/stdlib-js/stdlib/commit/4eff2519ee5ff28a5f7c5e5c007f17de821218df) - **chore:** update require paths in benchmarks [(#15266)](https://github.com/stdlib-js/stdlib/pull/15266) _(by Philipp Burckhardt)_
 -   [`046e727`](https://github.com/stdlib-js/stdlib/commit/046e727333a968205db1779c1fe5e12d86a39a7d) - **bench:** use string interpolation in `blas/base/gswap` [(#10635)](https://github.com/stdlib-js/stdlib/pull/10635) _(by Om-A-osc)_
 
 </details>
@@ -24,9 +25,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Om-A-osc
+-   Philipp Burckhardt
 
 </section>
 
